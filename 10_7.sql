@@ -10,12 +10,12 @@ ORDER BY cheapest_item ASC;
 
 SELECT order_num, SUM(quantity) AS total_quantity 
 FROM OrderItems 
-GROUP By order_num
+GROUP By order_num 
 HAVING SUM(quantity) >= 100 
 ORDER By order_num, total_quantity;
 
 SELECT order_num, SUM(item_price * quantity) AS total_price 
-FROM OrderItems
+FROM OrderItems 
 GROUP BY order_num 
 HAVING total_price >= 1000 
 ORDER By order_num, total_price;
